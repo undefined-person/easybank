@@ -1,0 +1,122 @@
+.footer {
+  padding: 48px 0;
+  background-color: $dark-color;
+
+  &__container {
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      width: 139px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: 13px;
+    align-items: center;
+    margin-top: 55px;
+
+    &-icon {
+      fill: $light-color;
+      transition: fill 0.3s ease-in-out;
+
+      &:hover {
+        fill: $green-color;
+      }
+    }
+
+    @include tablet {
+      column-gap: 16px;
+      margin-top: 32px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 4 / 3 span;
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+      row-gap: 8px;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -0.234px;
+    color: $light-color;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $green-color;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: 10 / 3 span;
+    row-gap: 24px;
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    border-radius: 22px;
+    padding: 8px 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: $light-color;
+    background: $green-blue-gradient;
+    transition: opacity 0.3s ease-in-out;
+
+    @include hover {
+      opacity: 0.4;
+    }
+  }
+
+  &__copy {
+    margin: 0;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: -0.234px;
+    text-align: right;
+    color: $light-color;
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+}

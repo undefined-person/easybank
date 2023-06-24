@@ -1,0 +1,100 @@
+.articles {
+  padding: 80px 0;
+  background-color: $dark-white;
+
+  &__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: -0.714px;
+    color: $dark-color;
+
+    @include small-tablet {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 40px;
+
+    @include tablet {
+      row-gap: 24px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    grid-column: 3 span;
+    background-color: $light-color;
+
+    &-img {
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+
+      @include mobile {
+        height: 200px;
+      }
+    }
+
+    &-link {
+      @include hover {
+        color: $green-color;
+      }
+    }
+
+    &-author {
+      margin: 0;
+      font-size: 10px;
+      line-height: 18px;
+      letter-spacing: -0.156px;
+      color: $dark-gray-color;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.286px;
+      color: $dark-color;
+      transition: color 0.3s ease-in-out;
+
+      @include hover {
+        color: $green-color;
+      }
+    }
+
+    &-text {
+      display: -webkit-box;
+      overflow: hidden;
+      margin: 0;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: -0.203px;
+      color: $dark-gray-color;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include small-tablet {
+      grid-column: 2 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    row-gap: 8px;
+  }
+}

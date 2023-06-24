@@ -1,0 +1,87 @@
+.features {
+  padding: 95px 0;
+  background-color: $light-gray-color;
+
+  &__top {
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: -0.714px;
+    color: $dark-color;
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 16px;
+    max-width: 635px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.281px;
+    color: $dark-gray-color;
+  }
+
+  &__content {
+    margin-top: 72px;
+    row-gap: 32px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+
+    &-title {
+      margin: 0;
+      margin-top: 40px;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: -0.429px;
+      color: $dark-color;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      margin-top: 26px;
+      line-height: 26px;
+      letter-spacing: -0.25px;
+      color: $dark-gray-color;
+
+      @include tablet {
+        text-align: center;
+      }
+
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-column: 6 span;
+    }
+
+    @include small-tablet {
+      grid-column: 2 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  @include tablet {
+    padding: 64px 0;
+  }
+}

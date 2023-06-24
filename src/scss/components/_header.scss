@@ -1,0 +1,116 @@
+.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: $light-color;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__btn {
+    border-radius: 22px;
+    padding: 8px 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: $light-color;
+    background: $green-blue-gradient;
+    transition: opacity 0.3s ease-in-out;
+
+    @include hover {
+      opacity: 0.4;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  @include small-tablet {
+    height: 64px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+
+    @include small-tablet {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $dark-gray-color;
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -28px;
+      display: block;
+      width: 0;
+      height: 4px;
+      background: $green-blue-gradient;
+      transition: width 0.3s ease-in-out;
+    }
+
+    @include hover {
+      color: $dark-color;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @include small-tablet {
+      color: $dark-color;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @include small-tablet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 88px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 32px 0;
+    width: 90%;
+    background-color: $light-color;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}
+
+.burger {
+  position: relative;
+  display: none;
+
+  @include small-tablet {
+    display: block;
+  }
+}
+
+.nav.menu--active {
+  visibility: visible;
+  transform: none;
+}

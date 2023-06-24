@@ -1,0 +1,18 @@
+// fonts
+$main-family: "OpenSans", sans-serif;
+
+// vars
+$content-width: 1110px;
+$container-offset: 30px;
+$container-offset-tablet: 24px;
+$container-width: calc(#{$content-width} + (#{$container-offset} * 2));
+
+// colors
+$light-color: #fff;
+$dark-white: #fafafa;
+$dark-color: #2d314d;
+$light-gray-color: #f4f5f7;
+$dark-gray-color: #9597a5;
+$green-blue-gradient: linear-gradient(135deg, #33d35e 0%, #2ab6d9 100%);
+$green-color: #30c88f;
+$overlay-color: linear-gradient(180deg, #2d314d 0%, rgba(45 49 77 / 0%) 100%);

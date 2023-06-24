@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  padding: 170px 0;
+  background-color: $dark-white;
+
+  &__container {
+    align-items: center;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__content {
+    grid-column: 6 span;
+
+    @include big-desktop {
+      grid-column: 12 span;
+    }
+
+    @include small-mobile {
+      padding-top: 220px;
+    }
+
+    @include small-tablet {
+      grid-column: 4 span;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    color: $dark-color;
+
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: -70px;
+    bottom: 0;
+    height: 100%;
+
+    &-desktop {
+      @include big-desktop {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @include small-mobile {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    @include big-desktop {
+      left: 0;
+      right: 0;
+      top: -60px;
+      grid-column: 12 span;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.281px;
+    color: $dark-gray-color;
+
+    @include tablet {
+      font-size: 15px;
+    }
+  }
+
+  &__btn {
+    margin-top: 36px;
+    border-radius: 22px;
+    padding: 8px 32px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: $light-color;
+    background: $green-blue-gradient;
+    transition: opacity 0.3s ease-in-out;
+
+    @include hover {
+      opacity: 0.4;
+    }
+  }
+
+  @include tablet {
+    padding: 120px 0;
+  }
+}
